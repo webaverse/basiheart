@@ -227,8 +227,9 @@ export default () => {
   };
 
   const heartMesh = _makeHeartMesh();
-  app.add(heartMesh);
   heartMesh.frustumCulled = false;
+  app.add(heartMesh);
+  heartMesh.updateMatrixWorld();
 
   useFrame(() => {
     heartMesh.update();
