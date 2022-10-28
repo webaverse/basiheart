@@ -1,8 +1,7 @@
 import * as THREE from 'three';
-import * as BufferGeometryUtils from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 // import easing from './easing.js';
 import metaversefile from 'metaversefile';
-const {useApp, useInternals, useGeometries, useMaterials, useFrame, useActivate, useLoaders, usePhysics, addTrackedApp, useDefaultModules, useCleanup} = metaversefile;
+const {useApp, useInternals, useGeometries, useMaterials, useFrame, useActivate, useLoaders, usePhysics, addTrackedApp, useDefaultModules, useCleanup, useThreeUtils} = metaversefile;
 
 // const localVector = new THREE.Vector3();
 
@@ -12,6 +11,7 @@ export default () => {
   const physics = usePhysics();
   const {CapsuleGeometry} = useGeometries();
   const {WebaverseShaderMaterial} = useMaterials();
+  const {BufferGeometryUtils} = useThreeUtils();
 
   const physicsIds = [];
 
